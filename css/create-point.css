@@ -1,0 +1,33 @@
+:root{--title-color: #322153;
+    --primary-color: #34cb79;}
+    
+
+#page-create-point{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;}
+
+#page-create-point header{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+#page-create-point header a{
+    color: #322153;
+    font-weight: bold;
+    display: flex;
+    align-items: center;}
+
+#page-create-point header a span{
+    margin-right: 16px;
+    display: inline-block;
+    background-image: url('../icones/arrow-left.svg');
+    width: 20px;
+    height: 20px;}
+
+form{background-color: white;
+    margin: 80px auto;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 730px;}
