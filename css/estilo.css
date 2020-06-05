@@ -1,7 +1,13 @@
-:root{--title-color: #322153;}
+:root{--title-color: #322153;
+--primary-color: #34cb79;}
 
-*{font-family: 'Roboto', sans-serif;margin: 0 ;padding: 0;box-sizing: border-box;}
-body{background: #f0f0f0;}
+*{font-family: 'Roboto', sans-serif;
+   margin: 0 ;
+   padding: 0;
+   box-sizing: border-box;}
+
+body{background: #f0f0f0;
+-webkit-font-smoothing: antialiased;}
 
 a{ text-decoration: none;}
 
@@ -10,13 +16,21 @@ h1,h2,h3,h4,h5,h6{color: var(--title-color);
 
 #page-home{
 background: url('../icones/home-background.svg') no-repeat;
+height: 100vh;
 background-position: 35vw bottom;
-height: 100vh;}
+background-position-y: 8vw ;
+}
 
- #page-home .content{width: 90%;max-width: 1100px;margin: 0 auto;display:flex; flex-direction: column;}
+ #page-home .content{width: 90%;
+   max-width: 1100px;
+   height: 100%;
+   margin: 0 auto;
+   display:flex; 
+   flex-direction: column;}
 
- #page-home header{display: flex;
+ #page-home header{
     margin-top:48px;
+    display: flex;
     align-items: center;
     justify-content: space-between;}
 
@@ -30,7 +44,8 @@ height: 100vh;}
     display: flex; 
     margin-right: 16px;}
 
- #page-home main {max-width: 560px;
+ #page-home main {
+max-width: 560px;
 flex:1;
 display: flex; 
 flex-direction: column;
@@ -41,3 +56,41 @@ justify-content: center;}
  #page-home main p{font-size:24px;
 line-height: 38px;
 margin-top: 24px;}
+
+#page-home main a{width: 100%;
+max-width: 360px;
+background-color: var(--primary-color);
+height: 72px;
+display: flex;
+margin-top:40px;
+align-items: center;
+border-radius: 8px;
+font-weight: bold;
+color: #fff;}
+
+#page-home main a:hover{background-color: #2fb86e;
+transition: 400ms;}
+
+#page-home main a span{
+   width: 72px;height: 72px;
+   background-color:rgba(0,0,0,0.08);
+   border-top-left-radius: 8px;
+   border-bottom-left-radius: 8px;
+display: flex;align-items: center;justify-content: center;}
+
+#page-home main a span::after{
+   content: "";
+   background-image: url('../icones/search.svg');
+   width: 20px; height: 20px;}
+
+   #page-home main a strong{
+      flex: 1;
+      color: white;text-align: center;
+   }
+
+   @media (max-width:800px){
+   #page-home{background-position-x: 70vw ;}
+   #page-home .content{align-items: center;text-align: center;}
+   #page-home header a{position: absolute;bottom: 48px;left: 50%;transform: translateX(-50%);}
+   #page-home main{align-items: center;}
+   }
