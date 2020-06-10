@@ -7,7 +7,6 @@ function populateUFs(){
             ufSelect.innerHTML+=`<option value="${state.id}">${state.nome}</option>`
         }
     })
-
 }
 
 
@@ -34,9 +33,23 @@ function getCities(event){
             citySelect.innerHTML+=`<option value="${city.nome}">${city.nome}</option>`}
         citySelect.disabled=false
     })
-    
 }
 
 document
 .querySelector("[name=uf]")
 .addEventListener("change",getCities)
+
+/*Itens de coleta*/
+
+const itemsToCollet = document.querySelector(".items-grid li")
+
+for(const item of itemsToCollet){
+    item.addEventListener("click",handleSelectedItem)
+}
+
+function handleSelectedItem(event){
+    const itemLi = event.target
+
+    item1.classList.toggle("selected")
+    const itemId= itemLi.dataset.id
+}
