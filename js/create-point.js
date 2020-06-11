@@ -47,6 +47,10 @@ for(const item of itemsToCollet){
     item.addEventListener("click",handleSelectedItem)
 }
 
+const collectedItems = document.querySelector("input[name=items]")
+
+let selectedItems =[];
+
 function handleSelectedItem(event){
     const itemLi = event.target
 
@@ -56,9 +60,18 @@ function handleSelectedItem(event){
 
     //verificar se existe itens
 
-    const alreadySelected =selectedItems.findIndex(item =>{
+    const alreadySelected = selectedItems.findIndex(item =>{
         const itemFound= item == itemId
         return itemFound
     })
+    if (alreadySelected>=0){
+        const filteredItem = selectedItems.filter(item=> {const itemIsDifferent = item != itemId
+         return itemIsDifferent} )
+    }
+    else {
+        selectedItems.push(itemId)
+    }
+
+    collectedItems.value=selectedItems;
 
 }
