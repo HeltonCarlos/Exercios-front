@@ -41,7 +41,7 @@ document
 
 /*Itens de coleta*/
 
-const itemsToCollet = document.querySelector(".items-grid li")
+const itemsToCollet = document.querySelectorAll(".items-grid li")
 
 for(const item of itemsToCollet){
     item.addEventListener("click",handleSelectedItem)
@@ -50,6 +50,15 @@ for(const item of itemsToCollet){
 function handleSelectedItem(event){
     const itemLi = event.target
 
-    item1.classList.toggle("selected")
+    itemLi.classList.toggle("selected")
     const itemId= itemLi.dataset.id
+
+
+    //verificar se existe itens
+
+    const alreadySelected =selectedItems.findIndex(item =>{
+        const itemFound= item == itemId
+        return itemFound
+    })
+
 }
