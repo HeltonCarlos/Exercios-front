@@ -1,0 +1,61 @@
+:root{--title-color: #322153;
+    --primary-color: #34cb79;}
+    
+    *{font-family: 'Roboto', sans-serif;
+        margin: 0 ;
+        padding: 0;
+        box-sizing: border-box;}
+
+#page-create-point{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;}
+
+#page-create-point header{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+#page-create-point header a{
+    color: #322153;
+    font-weight: bold;
+    display: flex;
+    align-items: center;}
+
+#page-create-point header a span{
+    margin-right: 16px;
+    display: inline-block;
+    background-image: url('../icones/arrow-left.svg');
+    width: 20px;
+    height: 20px;}
+
+main{margin-top: 48px;padding-left: 24px;}
+
+main h4{font-weight: bolder;
+margin-bottom: 32px;}
+
+main .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;}
+
+main .cards img{width: 100%;
+height: auto;
+border-radius: 8px 8px 0 0;}
+
+main .card h1{margin-top: 32px;
+    font-size: 36px;
+    line-height: 41px;
+    color: #322153;}
+
+main .card h3{
+    margin: 24px 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--primary-color);}
+
+    main .card p{margin-bottom: 150px;}

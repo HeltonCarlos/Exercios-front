@@ -5,3 +5,8 @@
     #page-home main{align-items: center;}
     }
 
+@media(max-width:750px){
+    main{margin: 0 auto;}
+    main .cards{display: grid;grid-template-columns: 1fr;}
+    main .card p{margin-bottom: 25px;}
+}
